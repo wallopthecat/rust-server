@@ -1,0 +1,13 @@
+version: '2'
+services:
+  rustserver:
+    image: didstopia/rust-server
+    ports:
+      - "28015:28015"
+      - "28016:28016"
+      - "28016:28016"
+      - "8082:8080"
+    volumes:
+      - /network/misc/dataz/docker/rust:/steamcmd/rust
+    env_file:
+      - ./rust.env
